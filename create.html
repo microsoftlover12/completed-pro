@@ -1,0 +1,161 @@
+<html>
+<head>
+
+    
+
+        <link rel="stylesheet" href="po.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+     
+            
+
+
+</head>  
+
+
+        <body class="post-body">
+
+          <div align="center" id="wrapper">
+            <div id="go"></div>
+            <h1 class="post-go">Your post</h1>
+                  
+                  <center><br><button onclick="changebold()" >B</button>
+                    <button  onclick="changeitalic()">I</button>
+                    <button onclick="changeunder()" >underline</button>
+                  
+                
+                
+                
+                <select id="size" onchange="changesize(this)"> 
+                  
+                <option value="20px">20px</option> 
+                <option value="30px">30px</option>  
+                <option value="40px">40px</option> 
+                
+                
+                
+                </select>
+                
+                <select onclick="changefont(this)">
+                
+                <option> Arial</option>
+                <option> Verdana</option>
+                <option> Geneva</option>
+                  </select>
+                
+                  
+                  <br>
+                  
+                  <textarea style="width: 700px; height: 300px"  id="2" cols="69" rows="30"></textarea>
+                  
+                </center>
+                <br>
+                <input type="button" value="Upload photo" onclick="Upload()">
+                <button type="button">post</button>
+                <input type="file" multiple="false" accept="image/*" id="finput" onchange="Upload()">
+                 </div>
+                
+                
+                
+                
+                
+                   </body> 
+               
+                 <script> 
+                 
+                 function changeitalic(){
+
+                if(document.getElementById("2").style.fontStyle=="italic"){
+
+                  
+                  document.getElementById("2").style.fontStyle="normal";
+
+                 }
+                 else {
+                   document.getElementById("2").style.fontStyle="italic";
+                  }
+
+                }
+
+                function changebold(){
+
+
+                 
+                   if(document.getElementById("2").style.fontWeight=="bold"){
+
+                    document.getElementById("2").style.fontWeight="normal";
+
+                   }else{document.getElementById("2").style.fontWeight="bold";
+
+                     
+
+                   }}
+                
+                 
+                  
+
+                   function changeunder(){
+
+                  if(document.getElementById("2").style.textDecoration=="underline"){
+
+                    document.getElementById("2").style.textDecoration="normal";
+
+                  }else{
+
+                    document.getElementById("2").style.textDecoration="underline";
+                  }
+
+                   }
+
+
+                   function changesize(obj){
+
+                     //var x=document.getElementById("size").value;
+                     //document.getElementById("output").innerHTML=x;
+                   
+                    const newSize = obj.value;
+                    document.getElementById("2").style.fontSize = newSize;
+                    
+/*
+if(x=="20px"){
+                     x.changesize="normal";
+                     
+                     
+                    }else{x="20px";}
+                    
+                    if(x=="30px"){
+                      
+                      x.changesize="normal";
+                    }
+                    
+                    
+                    else{x="30px";
+                    
+                    
+                    
+                  }
+                  */
+                  
+                }
+                function changefont(font){
+                  var newFont=font.value;
+console.log(font.value);
+               document.getElementById("2").style.fontFamily=font.value;
+
+
+                }
+                
+                </script>
+                
+                
+                <script type ="text/javascript" src="creat.js"></script>
+
+
+                 
+                </html>
+
+
+
+
+

@@ -1,0 +1,25 @@
+*{
+
+
+    background-color: blanchedalmond;
+}
+
+
+.container{
+
+
+    max-width: 1000px;
+}
+
+
+.text_post{
+
+
+    text-align: center;
+}
+.img-thumbnail{
+
+    margin-top: 20px;
+    width:200px;
+}
+
