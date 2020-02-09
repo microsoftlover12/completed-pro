@@ -17,8 +17,8 @@ var formulaire=document.getElementById("signin-form");
 var signIn=document.getElementById("signin")
   //get firebase element
 
-
-signIn.addEventListener('click',function(e){
+if(signIn != null) {
+	signIn.addEventListener('click',function(e){
   e.preventDefault();
   var email = document.getElementById("email");
     console.log(email)
@@ -39,6 +39,9 @@ signIn.addEventListener('click',function(e){
     });
 
 })
+	
+}
+
 
    function signUp(){
     
